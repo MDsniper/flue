@@ -9,8 +9,7 @@
     "pnpm": ">=11 <12"
   },
   "scripts": {
-    "build": "node canary.js && tsc",
-    "prepare": "node canary.js"
+    "postinstall": "git config core.hooksPath .githooks && chmod +x .githooks/*"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.0",
